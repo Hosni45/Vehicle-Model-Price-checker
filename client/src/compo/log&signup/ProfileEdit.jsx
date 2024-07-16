@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './design.css';
 import axios from 'axios';
+import Box from '@mui/joy/Box';
+import Textarea from '@mui/joy/Textarea';
 
 
 
@@ -21,11 +23,14 @@ axios.update('url',{name,lastName,phone})
             <h2>Update profile</h2>
  
 
-<input className='updateField1' type="text" placeholder='name' />
-<input className='updateField2' type="text" placeholder='Last Name' />
-<input className='updateField3' type="Number"placeholder='Phone Number' />
 
-<button className='btnUpdate'></button>
+<Box sx={{ display: 'flex', gap: 2, alignItems: 'center', flexWrap: 'wrap' }}>
+      <Textarea size="md" name="Size" placeholder="name" />
+      <Textarea size="md" name="Size" placeholder="Last Name" />
+      <Textarea size="md" name="Size" placeholder="Phone Number" />
+    
+    </Box>
+<button className='btnUpdate' > UPDATE </button>
         </div>
       
     </div>
