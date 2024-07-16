@@ -118,7 +118,7 @@ export default function SignUp() {
         </FormControl>
         <Button sx={{ mt: 1 }} onClick={handleSignUp}>Sign Up</Button>
         <Typography
-          endDecorator={<Link href="/sign-in">Sign in</Link>}
+          endDecorator={<Link href="/Login">Sign in</Link>}
           fontSize="sm"
           sx={{ alignSelf: 'center' }}
         >

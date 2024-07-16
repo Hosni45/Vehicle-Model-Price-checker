@@ -1,0 +1,159 @@
+html {
+  background-image: url('https://www.shutterstock.com/shutterstock/photos/2281284523/display_1500/stock-vector-abstract-white-background-minimal-geometric-white-light-background-2281284523.jpg');
+}
+
+.all {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.leftside {
+  border-radius: 15px;
+  height: 70%;
+  width: 25%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightside {
+  
+  background-color: rgba(116, 116, 119, 0.315);
+  border-radius: 15px;
+  height: 70%;
+  width: 25%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 20%;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 0 10px;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-details {
+  text-align: center;
+  padding: 15px;
+}
+
+.card-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-details p {
+  margin: 5px 0;
+}
+
+.ad {
+  border-radius: 20px;
+  width: 350px;
+  height: 600px;
+  
+}
+
+.Menu {
+  border-radius: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Menu a {
+  margin: 10px 0;
+}
+
+.Menu img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.Menu{
+width: 30px;
+margin-top: -10px;
+
+}
+
+.profileUpdater{
+  
+  border-radius: 30px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+
+.btnUpdate{
+position: absolute;
+  background: #5E5DF0;
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+.updateField1{
+  border-radius: 30px;
+}
+.updateField2{
+  border-radius: 30px;
+}
+.updateField3{
+  border-radius: 30px;
+}
+
+.updateContainer{
+  size: 70vw;
+  border-width: 2px;
+  border-radius: 30px;
+  border-color: red;
+
+}
