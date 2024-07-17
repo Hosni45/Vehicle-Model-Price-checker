@@ -15,7 +15,7 @@ const ProfileEdit = () => {
       const response = await axios.put('/api/profile/update', { name, lastName, phone });
       console.log('Profile updated:', response.data);
       alert('Profile updated successfully');
-      history.push('/dashboard');
+      history.push('/dash');
     } catch (error) {
       console.error('Error updating profile:', error);
       alert('Failed to update profile');

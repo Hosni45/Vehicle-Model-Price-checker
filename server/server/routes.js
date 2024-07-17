@@ -26,6 +26,18 @@ router.post('/signup', asyncc (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+router.update('/update', async (req, res) => {
+  const { name, lastName, phone, email, password } = req.body;
+  
+  try {
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const user = await User.update({ name, lastName, phone, email, password: hashedPassword });
+    res.json({ message: 'Welcome to the Club', user });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 
 router.delete('/delete', async (req, res) => {
   try {
