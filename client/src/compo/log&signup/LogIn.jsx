@@ -16,14 +16,14 @@ export default function LogIn() {
 
   const handleSignIn = async () => {
     try {
-      const response = await axios.post('/api/auth/signin', { email, password });
+      const response = await axios.post('/api/auth/login', { email, password });
       localStorage.setItem('token', response.data.token);
     } catch (error) {
       console.error(error);
-      alert('Wrong password/Usernme');
+      alert('Wrong password/Username');
     }
   };
-// LogIn compo from MUI Library
+
   return (
     <main>
       <CssBaseline />
@@ -68,7 +68,9 @@ export default function LogIn() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </FormControl>
-        <Button sx={{ mt: 1 }} onClick={handleSignIn}>Log in</Button>
+        <Button sx={{ mt: 1 }} onClick={handleSignIn}>
+          Log in
+        </Button>
         <Typography
           endDecorator={<Link href="/signup">Sign up</Link>}
           fontSize="sm"

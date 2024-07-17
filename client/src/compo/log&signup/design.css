@@ -1,5 +1,5 @@
 html {
-  background-image: url('https://www.shutterstock.com/shutterstock/photos/2281284523/display_1500/stock-vector-abstract-white-background-minimal-geometric-white-light-background-2281284523.jpg');
+  background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjk5Ni0wMDlfMS1rcm9pcjRkay5qcGc.jpg');
 }
 
 .all {
@@ -116,8 +116,37 @@ margin-top: -10px;
   align-items: center;
   position: relative;
 }
+.calcInputs{
+  display: grid;
+  margin-top: 20px;
 
-
+}
+.btnDelete{
+  margin: 20px;
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: .375em;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #363636;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+  height: 2.5em;
+  justify-content: center;
+  line-height: 1.5;
+  padding: calc(.5em - 1px) 1em;
+  position: relative;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
 .btnUpdate{
 
   margin: 20px;
@@ -183,4 +212,113 @@ margin-top: -10px;
   border-radius: 30px;
   border-color: red;
 
+}
+/* .updateToBackBtn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin: 20px;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: .375em;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #363636;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  height: 2.5em;
+  justify-content: center;
+  line-height: 1.5;
+  padding: calc(.5em - 1px) 1em;
+  text-align: center;
+  user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+} */
+
+.topRightButton:active {
+  border-color: #4a4a4a;
+  outline: 0;
+}
+
+.topRightButton:focus {
+  border-color: #485fc7;
+  outline: 0;
+}
+
+.topRightButton:hover {
+  border-color: #b5b5b5;
+}
+
+.topRightButton:focus:not(:active) {
+  box-shadow: rgba(72, 95, 199, .25) 0 0 0 .125em;
+}
+
+.updateToBackBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.updateToBackBtn img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.updateToBackBtn:active {
+  border-color: #4a4a4a;
+  outline: 0;
+}
+
+.updateToBackBtn:focus {
+  border-color: #485fc7;
+  outline: 0;
+}
+
+.updateToBackBtn:hover {
+  border-color: #b5b5b5;
+}
+
+.updateToBackBtn:focus:not(:active) {
+  box-shadow: rgba(72, 95, 199, .25) 0 0 0 .125em;
+}
+.rightside {
+  background-color: rgba(116, 116, 119, 0.315);
+  border-radius: 15px;
+  height: 70%;
+  width: 25%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; /* Add this line */
+}
+
+.article {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }

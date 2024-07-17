@@ -1,4 +1,5 @@
-import * as React from 'react';
+import React, { useState } from 'react';
+import "./design.css";
 import '@fontsource/inter';
 import Sheet from '@mui/joy/Sheet';
 import CssBaseline from '@mui/joy/CssBaseline';
@@ -11,27 +12,35 @@ import Link from '@mui/joy/Link';
 import axios from 'axios';
 
 export default function SignUp() {
-  const [name, setName] = React.useState('');
-  const [lastName, setLastName] = React.useState('')
-  const [email, setEmail] = React.useState('')
-  const [phone, setphone] = React.useState('')
-  const [password, setPassword] = React.useState('');
-  const [confirmPassword, setConfirmPassword] = React.useState('');
+  const [name, setName] = useState('');
+  const [lastName, setLastName] =useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [password, setPassword] =useState('');
+  const [confirmPassword, setConfirmPassword] =useState('');
 
   const handleSignUp = async () => {
     if (password !== confirmPassword) {
-      alert('Must enter same password');
-      return;
+      alert('Passwords must match');
+      return
     }
 
     try {
-      const response = await axios.post('/api/auth/signup', { name,lastName,phone ,email, password, confirmPassword });
+      const response = await axios.post('http://localhost:5000/api/auth/signup', {
+        name,
+        lastName,
+        email,
+        phone,
+        password,
+        confirmPassword,
+      });
       localStorage.setItem('token', response.data.token);
     } catch (error) {
       console.error(error);
+      alert('Failed to sign up');
     }
   };
-// SignUp compo from MUI Library
+
   return (
     <main>
       <CssBaseline />
@@ -59,9 +68,9 @@ export default function SignUp() {
         <FormControl>
           <FormLabel>Name</FormLabel>
           <Input
-            name="Name"
-            type="name"
-            placeholder="name"
+            name="name"
+            type="text"
+            placeholder="Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -69,25 +78,25 @@ export default function SignUp() {
         <FormControl>
           <FormLabel>Last Name</FormLabel>
           <Input
-            name="Last Name"
-            type="Last name"
+            name="lastName"
+            type="text"
             placeholder="Last Name"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
           />
         </FormControl>
         <FormControl>
-          <FormLabel>phone</FormLabel>
+          <FormLabel>Phone Number</FormLabel>
           <Input
             name="phone"
-            type="Number"
+            type="tel"
             placeholder="Phone Number"
             value={phone}
-            onChange={(e) => setphone(e.target.value)}
+            onChange={(e) => setPhone(e.target.value)}
           />
         </FormControl>
         <FormControl>
-          <FormLabel>E-mail</FormLabel>
+          <FormLabel>Email</FormLabel>
           <Input
             name="email"
             type="email"
@@ -116,9 +125,11 @@ export default function SignUp() {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </FormControl>
-        <Button sx={{ mt: 1 }} onClick={handleSignUp}>Sign Up</Button>
+        <Button sx={{ mt: 1 }} onClick={handleSignUp}>
+          Sign Up
+        </Button>
         <Typography
-          endDecorator={<Link href="/Login">Sign in</Link>}
+          endDecorator={<Link href="/login">Sign in</Link>}
           fontSize="sm"
           sx={{ alignSelf: 'center' }}
         >
